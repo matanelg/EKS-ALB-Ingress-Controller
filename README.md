@@ -1,13 +1,18 @@
 # EKS-ALB-Ingress-Controller
 
-## Quick Start
-
-### Prerequests
+## Prerequests
 * Terraform 	v1.0.7
 * aws-cli 	2.2.21 
 * docker 	20.10.7
 * kubectl 	v1.22.3
 * java 	11.0.11 (for jenkis install via war file)
+
+## Quick Start
+01. start jenkis & go to localhost:8080
+02. Create new pipeline.  Dashboard >> New Item
+03. Copy Jenkisdile from the repository to the pipeline tab and save it
+04. Build. 
+
 
 
 ## Summary
@@ -37,5 +42,12 @@ The backend (pods) serve post request from frontend (S3) and return prediction f
 
 ## Demo
 
+### Application
+
+https://user-images.githubusercontent.com/64362937/141658655-041e356c-2f8e-4444-a351-ff2bc182098b.mp4
+
+### Auto Scale
+
+https://user-images.githubusercontent.com/64362937/141658669-f0d486af-9dd0-47c3-b988-472375e98896.mp4
 
 
