@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+    environment {
+        repo_name="ecr-01"
+        region="us-east-1"
+    }
+        stage('01. Terraform - Create Infrastructure') {
+            steps {
+                sh '''
+                    #!/bin/bash
+                    cd ./01-Terraform
+                    terraform init
+                    terraform apply --auto-approve
+                 '''
+            }
+        }
+        stage('02. ECR - Build & Push To Registry') {
+            steps {
+                sh '''
+                    #!/bin/bash
+                    cd ./02-ECR
+                    bash ecr_build_push.sh
+                 '''
+            }
+        }
+        stage('03. Kubernetes - Deploy') {
+            steps {
+                sh '''
+                    #!/bin/bash
+                    cd ./03-Kubernetes
+                    bash run_k8s.sh
+                 '''
+            }
+        }
+        stage('04. S3 - Create Static Web Page') {
+            steps {
+                sh '''
+                    #!/bin/bash
+                    cd ./04-S3
+                    bash s3-website.sh
+                 '''
+            }
+        }
+    }
+}

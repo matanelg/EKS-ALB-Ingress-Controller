@@ -2,6 +2,13 @@
 
 ## Quick Start
 
+### Prerequests
+* Terraform 	v1.0.7
+* aws-cli 	2.2.21 
+* docker 	20.10.7
+* kubectl 	v1.22.3
+* java 	11.0.11 (for jenkis install via war file)
+
 
 ## Summary
 Example of deploying CI/CD pipeline via jenkis on master node.<br />
@@ -21,14 +28,6 @@ In general, the pipeline basically consists of five stages:
 <p align="center">
   <img src="https://github.com/matanelg/EKS-ALB-Ingress-Controller/blob/main/images/eks_diagram.png" width="100%" height="100%" />
 </p>
-
-
-## Prerequests
-* Terraform 	v1.0.7
-* aws-cli 	2.2.21 
-* docker 	20.10.7
-* kubectl 	v1.22.3
-* java 	11.0.11 (for jenkis install via war file)
 
 
 ## Application

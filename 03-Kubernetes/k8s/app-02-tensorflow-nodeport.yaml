@@ -1,0 +1,60 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tensorflow
+  labels:
+    app: tensorflow
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tensorflow
+  template:
+    metadata:
+      labels:
+        app: tensorflow
+    spec:
+      containers:
+      - name: tensorflow
+        image: ___:tensorflow_back
+        ports:
+        - containerPort: 5000
+      # affinity -- target group
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+                # node must have tags with key and values (when create nodegroup)
+              - key: role
+                operator: In
+                values:
+                - nodes-general
+        # podAntiAffinity important pod with the same deployment not deploy in the same node 
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - tensorflow
+            topologyKey: kubernetes.io/hostname
+            namespaces:
+            - default
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tensorflow
+spec:
+  selector:
+    app: tensorflow
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+
