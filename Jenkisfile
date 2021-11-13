@@ -4,6 +4,7 @@ pipeline {
         repo_name="ecr-01"
         region="us-east-1"
     }
+    stages {
         stage('01. Terraform - Create Infrastructure') {
             steps {
                 sh '''
