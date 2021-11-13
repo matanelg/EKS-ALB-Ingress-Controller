@@ -5,6 +5,11 @@ pipeline {
         region="us-east-1"
     }
     stages {
+       stage('Git Checkout') {
+           steps {
+               git branch: 'main', url: 'https://github.com/matanelg/EKS-ALB-Ingress-Controller'
+           }
+       }
         stage('01. Terraform - Create Infrastructure') {
             steps {
                 sh '''
