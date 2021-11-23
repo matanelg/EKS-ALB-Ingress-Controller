@@ -52,12 +52,12 @@
   * ALB Role (Web Identity) - Let Premmision to Kubernetes create ALB & Target Group Resources. 
 
 * Policies:
-  * AmazonEKSWorkerNodePolicy -  https://github.com/SummitRoute/aws_managed_policies/blob/master/policies/AmazonEKSWorkerNodePolicy
-  * AmazonEKSWorkerNodePolicy - https://github.com/SummitRoute/aws_managed_policies/blob/master/policies/AmazonEKSWorkerNodePolicy
-  * AmazonEKS_CNI_Policy - https://github.com/SummitRoute/aws_managed_policies/blob/master/policies/AmazonEKS_CNI_Policy
-  * AmazonEC2ContainerRegistryReadOnly - https://github.com/SummitRoute/aws_managed_policies/blob/master/policies/AmazonEC2ContainerRegistryReadOnly
-  * AmazonALBIngressControllerPolicy - https://github.com/matanelg/EKS-ALB-Ingress-Controller/blob/main/01-Terraform/IAM-Files/Policies/AmazonALBIngressControllerPolicy.json
-  * AmzonEKSClusterAutoScalerPolicy - https://github.com/matanelg/EKS-ALB-Ingress-Controller/blob/main/01-Terraform/IAM-Files/Policies/AmzonEKSClusterAutoScalerPolicy.json
+  * AmazonEKSWorkerNodePolicy - <br /> https://github.com/SummitRoute/aws_managed_policies/blob/master/policies/AmazonEKSWorkerNodePolicy
+  * AmazonEKSWorkerNodePolicy - <br /> https://github.com/SummitRoute/aws_managed_policies/blob/master/policies/AmazonEKSWorkerNodePolicy
+  * AmazonEKS_CNI_Policy - <br /> https://github.com/SummitRoute/aws_managed_policies/blob/master/policies/AmazonEKS_CNI_Policy
+  * AmazonEC2ContainerRegistryReadOnly - <br /> https://github.com/SummitRoute/aws_managed_policies/blob/master/policies/AmazonEC2ContainerRegistryReadOnly
+  * AmazonALBIngressControllerPolicy - <br /> https://github.com/matanelg/EKS-ALB-Ingress-Controller/blob/main/01-Terraform/IAM-Files/Policies/AmazonALBIngressControllerPolicy.json
+  * AmzonEKSClusterAutoScalerPolicy - <br /> https://github.com/matanelg/EKS-ALB-Ingress-Controller/blob/main/01-Terraform/IAM-Files/Policies/AmzonEKSClusterAutoScalerPolicy.json
 
 
 
