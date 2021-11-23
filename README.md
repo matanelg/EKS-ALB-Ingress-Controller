@@ -1,12 +1,12 @@
 # EKS-ALB-Ingress-Controller
 
 ## Prerequests
-* Terraform 	v1.0.7 	[Terraform installation link](https://learn.hashicorp.com/tutorials/terraform/install-cli)
-* aws-cli 	2.2.21 	[aws-cli installation link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-* docker 	20.10.7 	[docker installation link](https://docs.docker.com/engine/install/ubuntu/)
-* kubectl 	v1.22.3 	[kubectl installation link](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
-* java 	11.0.11 	[java installation link](https://www.tecmint.com/install-java-with-apt-on-ubuntu/)
-* jenkis 	2.303.3 LTS 	[jenkis installation link](https://www.jenkins.io/download/)
+* Terraform       v1.0.7         [Terraform installation link](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+* aws-cli         2.2.21         [aws-cli installation link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+* docker          20.10.7        [docker installation link](https://docs.docker.com/engine/install/ubuntu/)
+* kubectl         v1.22.3        [kubectl installation link](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+* java            11.0.11        [java installation link](https://www.tecmint.com/install-java-with-apt-on-ubuntu/)
+* jenkis          2.303.3 LTS    [jenkis installation link](https://www.jenkins.io/download/)
 
 
 ## Quick Start
@@ -16,7 +16,8 @@
 aws_access_key_id = ""
 aws_secret_access_key = ""
 ```
-* Note: profile name must be default (there are bash scripts that depend on it)
+* Note: **profile name must be default (there are bash scripts that depend on it)**
+
 02. start jenkis & go to localhost:8080
 ```bash
 java -jar jenkins.war
