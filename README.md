@@ -16,14 +16,16 @@
 aws_access_key_id = ""
 aws_secret_access_key = ""
 ```
-* Note: **profile name must be default (there are bash scripts that depend on it)**
+* **Note:** profile name must be **default** (there are bash scripts that depend on it)
 
 02. start jenkis & go to localhost:8080
 ```bash
 java -jar jenkins.war
 ```
 03. Create new pipeline.  Dashboard >> New Item
+
 04. Copy Jenkisdile from the repository to the pipeline tab and save it
+
 05. Build
 
 
